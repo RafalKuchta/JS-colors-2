@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Document</title>
+</head>
+<style>
+    body {
+        /* position: relative; */
+        display: flex;
+
+    }
+
+    div {
+        /* position: absolute; */
+        /* top: 50%;
+        left: 50%; */
+        height: 60px;
+        width: 80px;
+        border: 2px solid black;
+        margin: 30px auto;
+        cursor: pointer;
+
+    }
+
+    .red {
+        background-color: #f00;
+    }
+
+    .orange {
+        background-color: orange;
+    }
+
+    .yellow {
+        background-color: yellow;
+    }
+
+    .green {
+        background-color: #0f0;
+    }
+
+    .blue {
+        background-color: #00f;
+    }
+
+    .pink {
+        background-color: pink;
+    }
+</style>
+
+<body>
+    <div class="red"></div>
+    <div class="orange"></div>
+    <div class="yellow"></div>
+    <div class="green"></div>
+    <div class="blue"></div>
+    <div class="pink"></div>
+
+    <script>
+        const divRed = document.querySelector('.red');
+        const divOrange = document.querySelector('.orange');
+        const divYellow = document.querySelector('.yellow');
+        const divGreen = document.querySelector('.green');
+        const divBlue = document.querySelector('.blue');
+        const divPink = document.querySelector('.pink');
+
+        divRed.addEventListener('click', function () {
+            document.body.classList = "red";
+            divRed.insertAdjacentText('beforeend', 'Czerwony kolor');
+            document.body.insertAdjacentElement('afterend', divRed);
+        })
+
+        divOrange.addEventListener('click', function () {
+            document.body.classList = "orange";
+            document.body.appendChild(document.createElement('div'))
+        })
+
+        divYellow.addEventListener('click', function () {
+            document.body.classList = 'yellow';
+        })
+
+        divGreen.addEventListener('click', function () {
+            document.body.classList = 'green';
+        })
+
+        divBlue.addEventListener('click', function () {
+            document.body.classList = "blue";
+        })
+
+        divPink.addEventListener('click', function () {
+            document.body.classList = 'pink';
+        })
+    </script>
+</body>
+
+</html>
